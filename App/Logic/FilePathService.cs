@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Collections.Generic;
 
-namespace NaturalLanguageAnalyzer.Logic
+namespace App.Logic
 {
     internal class FilePathService
     {

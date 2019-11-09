@@ -1,4 +1,4 @@
-﻿namespace NaturalLanguageAnalyzer.Logic
+﻿namespace App.Logic
 {
     internal class ReadOptions
     {

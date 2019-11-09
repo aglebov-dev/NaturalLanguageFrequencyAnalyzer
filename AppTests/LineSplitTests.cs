@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NaturalLanguageAnalyzer.Logic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using App.Logic;
 
 namespace AppTests
 {

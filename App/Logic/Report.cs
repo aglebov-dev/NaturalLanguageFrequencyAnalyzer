@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace NaturalLanguageAnalyzer.Logic
+namespace App.Logic
 {
     internal class Report
     {

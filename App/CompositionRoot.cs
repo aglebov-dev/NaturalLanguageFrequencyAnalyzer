@@ -1,9 +1,9 @@
-﻿using Autofac;
+﻿using App.Logic;
+using Autofac;
 using Contracts;
 using TextProvider;
-using NaturalLanguageAnalyzer.Logic;
 
-namespace NaturalLanguageAnalyzer
+namespace App
 {
     internal static class CompositionRoot
     {

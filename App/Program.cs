@@ -4,10 +4,10 @@ using System.Threading;
 using Autofac;
 using CommandLine;
 using System.Diagnostics;
-using NaturalLanguageAnalyzer.CommandLine;
-using NaturalLanguageAnalyzer.Logic;
+using App.Logic;
+using App.CommandLine;
 
-namespace NaturalLanguageAnalyzer
+namespace App
 {
     class Program
     {

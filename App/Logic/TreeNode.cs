@@ -5,7 +5,7 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using Contracts;
 
-namespace NaturalLanguageAnalyzer.Logic
+namespace App.Logic
 {
     [DebuggerDisplay("Key: {_key}; Count: {Count}")]
     public class TreeNode : IComparable<TreeNode>

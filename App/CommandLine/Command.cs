@@ -1,6 +1,6 @@
 ﻿using CommandLine;
 
-namespace NaturalLanguageAnalyzer.CommandLine
+namespace App.CommandLine
 {
     internal class Command
     {

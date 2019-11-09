@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NaturalLanguageAnalyzer\NaturalLanguageAnalyzer.csproj" />
+    <ProjectReference Include="..\App\App.csproj" />
     <ProjectReference Include="..\TextProvider\TextProvider.csproj" />
   </ItemGroup>
 

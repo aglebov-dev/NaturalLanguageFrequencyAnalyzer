@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Contracts;
 using System.IO;
 
-namespace NaturalLanguageAnalyzer.Logic
+namespace App.Logic
 {
     internal class Processor
     {
