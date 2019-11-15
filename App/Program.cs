@@ -27,9 +27,9 @@ namespace App
 
         private static void Canceled(object sender, ConsoleCancelEventArgs e)
         {
-            Console.CancelKeyPress -= Canceled;
             if (e.SpecialKey == ConsoleSpecialKey.ControlC || e.SpecialKey == ConsoleSpecialKey.ControlBreak)
             {
+                Console.CancelKeyPress -= Canceled;
                 _cts.Cancel();
             }
         }
@@ -44,7 +44,7 @@ namespace App
                 Console.WriteLine("Source folder isn't exists");
                 return -1;
             }
-            if (!Directory.Exists(command.FolderPath))
+            if (!new FileInfo(command.ReportPath).Directory.Exists)
             {
                 Console.WriteLine("Folder of report isn't exists");
                 return -1;

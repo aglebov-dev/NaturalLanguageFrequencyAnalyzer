@@ -41,19 +41,18 @@ namespace App.Logic
             var words = _root.GetWords().OrderByDescending(x => x).ToArray();
             for (int i = 0; i < words.Length - 1; i++)
             {
-                WriteToStream(stream, words, i);
+                WriteToStream(stream, words[i]);
                 stream.WriteByte(NEW_LINE);
             }
 
             if (words.Length > 0)
             {
-                WriteToStream(stream, words, words.Length - 1);
+                WriteToStream(stream, words[words.Length - 1]);
             }
         }
 
-        private void WriteToStream(Stream stream, TreeNode[] words, int i)
+        private void WriteToStream(Stream stream, TreeNode word)
         {
-            var word = words[i];
             var bytes = ArrayPool<byte>.Shared.Rent(word.Length);
             word.Populate(bytes);
 

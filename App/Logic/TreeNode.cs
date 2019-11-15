@@ -17,15 +17,16 @@ namespace App.Logic
         public int Count => _wordsCount;
         public int Length { get; }
 
-        public static TreeNode CreateRoot() => new TreeNode(0x20, default);
+        public static TreeNode CreateRoot() => new TreeNode(Constants.SPACE, default);
 
         private TreeNode(byte key, TreeNode parent)
         {
             _key = key;
             _wordsCount = 0;
-            Length = parent is null ? 0 : parent.Length + 1;
             _parent = parent;
             _children = new ConcurrentDictionary<byte, TreeNode>(Constants.THREADS_COUNT, 8);
+
+            Length = parent is null ? 0 : parent.Length + 1;
         }
 
         public void Add(int length, byte[] word)
@@ -61,9 +62,9 @@ namespace App.Logic
                 {
                     yield return node;
                 }
-                foreach (var item in node._children)
+                foreach (var item in node._children.Values)
                 {
-                    queue.Enqueue(item.Value);
+                    queue.Enqueue(item);
                 }
             }
         }

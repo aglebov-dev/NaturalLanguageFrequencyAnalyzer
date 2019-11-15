@@ -18,7 +18,7 @@ namespace App.Logic
         {
             _filePathProvider = filePathProvider;
             _textProviders = textProviders;
-            _semaphore = new SemaphoreSlim(4);
+            _semaphore = new SemaphoreSlim(Constants.THREADS_COUNT);
         }
 
         public async Task StartAsync(ReadOptions options, CancellationToken token)
